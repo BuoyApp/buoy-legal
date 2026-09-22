@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buoy — Make plans with your people</title>
+<meta name="description" content="Buoy is the low-effort way to actually hang out with the people you already know. Drop a buoy, friends see it, they join.">
+<meta property="og:title" content="Buoy — Make plans with your people">
+<meta property="og:description" content="The low-effort way to actually hang out with the people you already know.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root { --brand: #3a5a75; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body {
+    background: var(--brand);
+    color: #fff;
+    font-family: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  .page {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    padding: 40px 28px 26px;
+  }
+
+  /* ---------- shared pieces ---------- */
+  .buoy-svg { animation: bob 1.8s ease-in-out infinite; display: block; }
+  .waves-svg { display: block; }
+  @keyframes bob {
+    0%, 100% { transform: translateY(0); }
+    50%      { transform: translateY(-11px); }
+  }
+  @media (prefers-reduced-motion: reduce) { .buoy-svg { animation: none; } }
+
+  .wordmark {
+    font-weight: 700;
+    letter-spacing: -0.035em;
+    line-height: 1;
+  }
+  .tagline { color: rgba(255,255,255,0.72); }
+
+  .cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 30px;
+    border-radius: 999px;
+    background: #fff;
+    color: var(--brand);
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.16);
+  }
+  .cta:hover { transform: translateY(-2px); box-shadow: 0 7px 24px rgba(0,0,0,0.22); }
+  .cta svg { width: 19px; height: 19px; }
+  .soon { font-size: 13px; color: rgba(255,255,255,0.42); }
+
+  footer {
+    font-size: 13px;
+    color: rgba(255,255,255,0.38);
+    text-align: center;
+  }
+  footer a { color: rgba(255,255,255,0.55); text-decoration: none; }
+  footer a:hover { color: rgba(255,255,255,0.85); }
+  footer span { margin: 0 8px; }
+
+  /* ---------- mobile: centred stack ---------- */
+  .main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0;
+  }
+  .mark { display: flex; flex-direction: column; align-items: center; }
+  .copy { display: flex; flex-direction: column; align-items: center; text-align: center; }
+  .buoy-svg { width: 128px; height: auto; }
+  .waves-svg { width: 218px; height: auto; margin-top: -15px; }
+  .wordmark { font-size: clamp(44px, 12vw, 58px); margin-top: 26px; }
+  .tagline { font-size: clamp(15px, 4vw, 18px); margin-top: 12px; }
+  .cta { margin-top: 36px; }
+  .soon { margin-top: 14px; }
+  footer { margin-top: 34px; }
+
+  /* ---------- desktop: logo left, text right ---------- */
+  @media (min-width: 860px) {
+    .page { padding: 56px 48px 34px; }
+    .main {
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      gap: 72px;
+    }
+    .mark { display: flex; flex-direction: column; align-items: center; }
+    .buoy-svg { width: 236px; }
+    .waves-svg { width: 402px; margin-top: -27px; }
+    .copy {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .wordmark { font-size: 96px; margin-top: 0; }
+    .tagline { font-size: 22px; margin-top: 16px; }
+    .cta { margin-top: 42px; }
+    .soon { margin-top: 14px; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="main">
+    <div class="mark">
+      <svg class="buoy-svg" viewBox="200 30 460 730" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M446.34 192.03C446.34 214.06 446.34 236.1 446.34 258.13C467.69 261.41 503.2 249.18 511.63 277.85C512.88 282.12 512.83 286.36 512.83 290.77C512.84 298.57 512.92 306.38 512.91 314.19C512.89 323.41 515.67 341.12 507.76 347.53C503.76 350.77 498.93 350.34 494.09 350.37C486.56 350.42 479.03 350.4 471.5 350.4C442.49 350.4 413.49 350.37 384.48 350.38C376.51 350.38 356.06 352.28 349.87 348.41C340.39 342.49 343.44 322.3 343.42 312.52C343.4 302.93 342.62 292.76 343.68 283.23C345.03 271.2 354.27 260.93 366.34 258.93C372.24 257.95 378.51 258.51 384.48 258.53C393.02 258.55 401.6 258.67 410.13 258.46C410.13 236.04 410.13 213.62 410.13 191.19C400.69 188.94 392.25 184.81 384.42 179.09C376.69 173.44 370.22 166.42 365.03 158.37C332.62 108.22 372.1 42.1 430.47 43.06C484.2 43.95 517.86 102.91 495.74 150.6C489.21 164.67 477.8 176.84 464.21 184.34C458.6 187.42 451.49 188.68 446.34 192.03ZM421.4 78.12C378.91 85.64 376.04 147.23 418 157.98C423.18 159.31 428.54 159.73 433.85 158.93C477.53 152.4 480.82 89.36 438 78.74C432.6 77.4 426.88 77.15 421.4 78.12ZM509.99 363.62C524.77 449.31 539.55 535 554.34 620.69C548.73 622.78 537.31 621.27 530.91 621.29C513.06 621.35 495.21 621.28 477.36 621.29C438.34 621.33 399.33 621.21 360.31 621.27C347.17 621.3 334.03 621.26 320.89 621.29C313.47 621.31 305.66 621.92 298.3 621.19C297.66 614.02 301.44 601.19 302.94 593.66C306.37 576.4 309.81 559.11 312.92 541.79C320.5 499.58 328.92 457.51 336.98 415.39C340.28 398.15 342.93 380.73 346.83 363.62C401.21 363.62 455.6 363.62 509.99 363.62ZM627.07 722.52C611.4 727.94 592.82 730.42 576.44 733.39C528.16 742.13 479.47 746.55 430.51 741.13C390.18 736.66 350.92 725.54 311.05 718.42C282.88 713.38 254.76 710.27 226.34 707.18C225.19 703.15 225.15 699.11 224.81 694.94C222.71 668.97 233.87 643.52 260.88 636.25C269.95 633.81 279.79 634.77 289.09 634.74C306.11 634.69 323.12 634.79 340.13 634.75C395.63 634.64 451.14 634.67 506.64 634.73C526.45 634.75 546.25 634.77 566.05 634.76C578.47 634.76 590.99 633.6 602.61 638.71C634.94 652.92 636.88 692.91 627.07 722.52Z" fill="#fff" fill-rule="evenodd"/>
+      </svg>
+      <svg class="waves-svg" viewBox="40 710 780 180" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M800.99 730.89C795.06 731.3 788.77 729.59 782.77 729.36C772.22 728.95 761.47 730.76 751.28 733.37C721.96 740.88 690.78 759.5 662.67 771.86C626.99 787.54 588.82 798.97 550.13 803.86C482.86 812.37 418.59 794.24 354.17 777.61C307.95 765.67 261.4 753.9 213.78 749.13C176.91 745.44 139.7 746.58 103.37 754.05C90.42 756.72 77.75 760.55 65.08 764.27C60.04 765.75 53.4 769.41 48.41 768.54C94.44 727.29 162.16 720.87 221.44 725.08C268.64 728.42 314.6 738.05 360.64 748.47C396.72 756.64 432.29 767 469.02 772.06C504.11 776.9 539.58 776.26 574.44 770.01C626.52 760.66 675.09 738.79 726.68 727.89C749.19 723.14 780.14 718.4 800.99 730.89Z" fill="#fff" opacity="0.95"/>
+        <path d="M723.56 801.17C717.46 807.08 708.98 811.57 701.72 815.92C685.5 825.64 668.49 834.17 651.02 841.37C578.43 871.32 499.38 884.53 421.55 869C354.14 855.54 292.09 822.65 223.83 812.3C197.04 808.24 170.14 808.26 143.5 813.29C134.49 814.99 125.81 817.64 117.08 820.38C113.01 821.66 108.18 824.49 103.99 824.6C114.85 814.14 129.76 807.4 143.9 802.83C176.28 792.35 210.41 792 243.91 796.38C279.96 801.09 315.05 810.51 350.01 820.27C380.95 828.9 411.87 838.64 443.66 843.77C477.01 849.15 510.7 850.22 544.3 846.72C586.45 842.33 627.22 829.97 667.27 816.6C680.83 812.07 694.44 807.63 708.26 803.96C712.94 802.72 718.98 800.14 723.56 801.17Z" fill="#fff" opacity="0.6"/>
+      </svg>
+    </div>
+
+    <div class="copy">
+      <h1 class="wordmark">buoy</h1>
+      <p class="tagline">Make plans with your people</p>
+
+      <a class="cta" href="#" id="appstore">
+        <svg viewBox="0 0 384 512" fill="currentColor" aria-hidden="true">
+          <path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/>
+        </svg>
+        Download on the App Store
+      </a>
+      <p class="soon" id="soonNote">Coming soon to iPhone</p>
+    </div>
+  </div>
+
+  <footer>
+    <a href="mailto:hello@buoy.social">hello@buoy.social</a>
+    <span>·</span>
+    <a href="privacy.html">Privacy</a>
+    <span>·</span>
+    <a href="terms.html">Terms</a>
+  </footer>
+
+</div>
+
+<script>
+  // Paste the App Store link here once Buoy is live. The button then
+  // activates and the "coming soon" note hides itself.
+  var APP_STORE_URL = "";
+  var btn = document.getElementById("appstore");
+  if (APP_STORE_URL) {
+    btn.href = APP_STORE_URL;
+    document.getElementById("soonNote").style.display = "none";
+  } else {
+    btn.style.opacity = "0.55";
+    btn.style.pointerEvents = "none";
+  }
+</script>
+</body>
+</html>

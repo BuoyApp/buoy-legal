@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buoy — Support</title>
+<style>
+  :root {
+    --ink: #1d2b36;
+    --ink-soft: #4a5b68;
+    --brand: #3a5a75;
+    --line: #dfe6ec;
+    --bg: #fbfcfd;
+    --accent-bg: #f1f6fa;
+  }
+  * { box-sizing: border-box; }
+  html { -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+    font-size: 17px;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 56px 24px 96px; }
+  header { border-bottom: 2px solid var(--brand); padding-bottom: 24px; margin-bottom: 40px; }
+  .mark {
+    display: inline-flex; align-items: center; gap: 9px;
+    font-weight: 700; font-size: 20px; letter-spacing: -0.01em;
+    color: var(--brand); margin-bottom: 18px;
+  }
+  .mark span.dot {
+    width: 13px; height: 13px; border-radius: 50%;
+    background: var(--brand); display: inline-block;
+  }
+  h1 { font-size: 30px; line-height: 1.2; margin: 0 0 8px; letter-spacing: -0.02em; }
+  .meta { color: var(--ink-soft); font-size: 14.5px; margin: 0; }
+  h2 { font-size: 20px; margin: 44px 0 12px; letter-spacing: -0.01em; color: var(--ink); }
+  h3 { font-size: 16.5px; margin: 26px 0 6px; color: var(--ink); }
+  p { margin: 0 0 16px; color: var(--ink-soft); }
+  strong { color: var(--ink); font-weight: 600; }
+  .intro {
+    background: var(--accent-bg); border: 1px solid var(--line);
+    border-radius: 12px; padding: 20px 24px; margin-bottom: 12px;
+  }
+  .intro p:last-child { margin-bottom: 0; }
+  .callout { border-left: 3px solid var(--brand); padding: 4px 0 4px 18px; margin: 0 0 16px; }
+  .callout p { margin-bottom: 0; color: var(--ink); }
+  a { color: var(--brand); }
+  footer {
+    margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--line);
+    font-size: 14px; color: var(--ink-soft);
+  }
+  @media (max-width: 480px) {
+    body { font-size: 16px; }
+    .wrap { padding: 36px 18px 72px; }
+    h1 { font-size: 25px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="mark"><span class="dot"></span>Buoy</div>
+    <h1>Support</h1>
+    <p class="meta">Last updated: November 17, 2026</p>
+  </header>
+
+  <div class="intro">
+    <p>Questions, problems, or feedback? Email <a href="mailto:hello@buoy.social">hello@buoy.social</a> and we'll get back to you.</p>
+  </div>
+
+  <h2>Common questions</h2>
+
+  <h3>How do I find my friends on Buoy?</h3>
+  <p>Open the People tab and tap <strong>Add friends</strong>. You can match your contacts to see who's already on Buoy, search by name or phone number, or send an invite link to someone who hasn't joined yet.</p>
+
+  <h3>Who can see what I post?</h3>
+  <p>Only the people you choose. Every buoy goes to your friends, or to the specific people and groups you pick when you post it. Nothing on Buoy is public, and there is no way to browse strangers' plans.</p>
+
+  <h3>What's the difference between "I'm in" and "Maybe"?</h3>
+  <p>When you tap <strong>I'm in</strong>, the host and the other guests can see you're coming. <strong>Maybe</strong> is private — only you can see it, so you can keep track of something you're considering without committing in front of everyone.</p>
+
+  <h3>What do the three posting modes mean?</h3>
+  <p><strong>I'm here</strong> is for something happening right now. <strong>I'm going</strong> is for a plan you've already made. <strong>I want to</strong> is for an idea with no plan yet — float it and see who's interested.</p>
+
+  <h3>How do I delete my account?</h3>
+  <p>Profile tab → Settings → <strong>Delete account</strong>. This permanently removes your account, your buoys, your RSVPs, and your connections. It cannot be undone.</p>
+
+  <h3>How do I report or block someone?</h3>
+  <p>Open their profile and use <strong>Report</strong> or <strong>Block</strong>. Blocking means they can no longer see your profile or your buoys, and you won't see theirs. Reports come directly to us and we review them.</p>
+
+  <h3>I'm not getting notifications.</h3>
+  <p>Check that notifications are enabled for Buoy in your device's Settings app, and that the Push notifications toggle is on in Buoy under the People tab → Settings. If both are on and you're still not receiving them, email us.</p>
+
+  <h3>How do I change or remove my profile photo?</h3>
+  <p>Tap your photo on the Profile tab and choose <strong>Change photo</strong> or <strong>Remove photo</strong>.</p>
+
+  <div class="callout">
+    <p>Buoy is free, and there is no advertising in the app.</p>
+  </div>
+
+  <h2>Still stuck?</h2>
+  <p>Email <a href="mailto:hello@buoy.social">hello@buoy.social</a> with your name and a description of what happened, and we'll help. If you're reporting a bug, telling us which screen you were on and what you tapped makes it much faster to track down.</p>
+
+  <footer>
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a><br><br>
+    © 2026 Buoy. All rights reserved.
+  </footer>
+</div>
+</body>
+</html>

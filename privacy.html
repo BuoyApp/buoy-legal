@@ -82,7 +82,7 @@
   <header>
     <div class="mark"><span class="dot"></span>Buoy</div>
     <h1>Privacy Policy</h1>
-    <p class="meta">Last updated: August 18, 2026</p>
+    <p class="meta">Last updated: November 17, 2026</p>
   </header>
 
   <div class="intro">
@@ -106,6 +106,7 @@
     <tr><td>Phone number</td><td>To create your account and sign you in by SMS. Your phone number is how friends find and connect with you.</td></tr>
     <tr><td>Name</td><td>So friends recognize you and your buoys.</td></tr>
     <tr><td>Username and Instagram handle <em>(optional)</em></td><td>Optional profile details you can add or remove at any time.</td></tr>
+    <tr><td>Profile photo <em>(optional)</em></td><td>If you add a photo, it is stored with our hosting provider and shown to people you are friends with, including next to buoys you post or join. You can change or remove it at any time from the Profile tab; removing it deletes the image from our storage. Your photo is not used for any purpose other than displaying it in the app.</td></tr>
     <tr><td>Buoys and plans you post</td><td>The activity, time, and place of what you're doing or want to do — the core of the app.</td></tr>
     <tr><td>RSVPs and group names</td><td>To coordinate who's coming and organize friend groups.</td></tr>
     <tr><td>Reports you submit</td><td>To review content or accounts you flag (see "Your safety and user content").</td></tr>
@@ -115,6 +116,7 @@
   <table>
     <tr><th>What</th><th>Why we collect it</th></tr>
     <tr><td>Contacts</td><td>If you grant contacts access, Buoy reads phone numbers from your contacts and checks them against existing Buoy users so you can find people you already know. Phone numbers are sent to our servers to perform that matching. We do not retain a permanent copy of your address book, and we do not contact people on your behalf. You can use Buoy without granting contacts access.</td></tr>
+    <tr><td>Photo library access</td><td>If you choose to set a profile photo, Buoy asks for permission to access your photo library so you can select an image. Buoy only receives the image you select, and does not read or upload any other photos.</td></tr>
     <tr><td>Places you select</td><td>When you add a location to a buoy, your search text is sent to Google Places to return matching results. Buoy stores the place you select so it can appear on your buoy; we do not keep a history of your searches. Buoy does <strong>not</strong> access or track your device's precise GPS location.</td></tr>
   </table>
 
@@ -122,8 +124,14 @@
   <table>
     <tr><th>What</th><th>Why we collect it</th></tr>
     <tr><td>Push notification token</td><td>A device identifier that lets us send you notifications (for example, when someone joins your buoy). You can turn notifications off in your device settings.</td></tr>
-    <tr><td>Technical and security data</td><td>Information such as IP address, device and operating-system information, app and session information, timestamps, and logs, together with approximate location derived from IP address. This may be processed by us or our service providers to operate, secure, troubleshoot, and prevent abuse of the service. We do not currently operate our own advertising or behavioral-tracking analytics.</td></tr>
+    <tr><td>Technical and security data</td><td>Information such as IP address, device and operating-system information, app and session information, timestamps, and logs, together with approximate location derived from IP address. This may be processed by us or our service providers to operate, secure, troubleshoot, and prevent abuse of the service.</td></tr>
+    <tr><td>Product usage data</td><td>Events describing how the app is used — for example that a buoy was posted, a friend request was sent, or contacts were synced — together with device type and app version, associated with a pseudonymous identifier for your account. We do not send your phone number, your contacts, or the contents of your buoys to our analytics provider.</td></tr>
+    <tr><td>Crash and error reports</td><td>When the app crashes or encounters an error, we receive a technical diagnostic report that may include device model, operating-system version, app version, and a stack trace, so we can find and fix the problem.</td></tr>
   </table>
+
+  <div class="callout">
+    <p>We use product usage data and crash reports <strong>only</strong> to operate, secure, and improve Buoy. We do not use them for advertising, we do not sell them, and we do not use them to build advertising or marketing profiles.</p>
+  </div>
 
   <div class="callout">
     <p>Buoy does not access or track your device's precise GPS location. Separately, infrastructure providers may infer <strong>approximate</strong> location from your IP address for security and service operation, as described above.</p>
@@ -136,6 +144,7 @@
     <li>To help you find and connect with people you already know.</li>
     <li>To send notifications about activity that involves you.</li>
     <li>To keep Buoy safe — reviewing reports, enforcing our rules, and removing abusive content or accounts.</li>
+    <li>To understand which features are used and to diagnose crashes and errors.</li>
     <li>To operate, maintain, secure, and improve the app.</li>
   </ul>
   <div class="callout">
@@ -153,10 +162,12 @@
   <table>
     <tr><th>Provider</th><th>Role</th></tr>
     <tr><td>Clerk</td><td>Account creation and phone-number (SMS) sign-in. May process IP address, device and session information, and approximate location derived from IP address.</td></tr>
-    <tr><td>Supabase</td><td>Database and backend services that store your app data. May process device and access information and approximate location derived from IP address.</td></tr>
+    <tr><td>Supabase</td><td>Database, file storage, and backend services that store your app data, including any profile photo you add. May process device and access information and approximate location derived from IP address.</td></tr>
     <tr><td>Google Places</td><td>Powers place search when you add a location to a buoy. Your use of these features is also subject to the <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a>.</td></tr>
     <tr><td>Apple</td><td>App distribution and the Apple Push Notification service.</td></tr>
     <tr><td>Expo</td><td>Push-notification delivery and app build and update services. Receives the push token and notification content needed to deliver a notification.</td></tr>
+    <tr><td>PostHog</td><td>Product analytics. Receives app-usage events, device type, app version, and a pseudonymous identifier for your account. Does not receive your phone number, contacts, or the contents of your buoys.</td></tr>
+    <tr><td>Sentry</td><td>Crash and error reporting. Receives technical diagnostic information when the app encounters an error, which may include a pseudonymous identifier for your account.</td></tr>
   </table>
 
   <h3>Business transfers</h3>
@@ -170,8 +181,8 @@
 
   <h2><span class="num">6</span>Your choices and rights</h2>
   <ul>
-    <li><strong>Edit your profile</strong> — update your name, username, and Instagram handle, and remove optional profile details, at any time.</li>
-    <li><strong>Permissions</strong> — grant or revoke contacts and notification access in your device settings.</li>
+    <li><strong>Edit your profile</strong> — update your name and profile photo, and remove optional profile details, at any time.</li>
+    <li><strong>Permissions</strong> — grant or revoke contacts, photo library, and notification access in your device settings.</li>
     <li><strong>Delete your account</strong> — you can permanently delete your account at any time from within the app. This removes your profile, buoys, connections, and other personal information associated with your account, except for limited information we may retain as described in Data retention below.</li>
     <li><strong>Access and requests</strong> — depending on where you live, you may have rights to access, correct, or delete your personal information. Contact us at <a href="mailto:hello@buoy.social">hello@buoy.social</a> and we'll help.</li>
   </ul>
@@ -193,7 +204,7 @@
   <p>Questions, requests, or concerns about your privacy? Reach us at <a href="mailto:hello@buoy.social">hello@buoy.social</a>.</p>
 
   <footer>
-    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a><br><br>
+    <a href="privacy.html">Privacy Policy</a> · <a href="terms.html">Terms of Use</a> · <a href="support.html">Support</a><br><br>
     © 2026 Buoy. All rights reserved.
   </footer>
 </div>
